@@ -10,44 +10,44 @@ const IMAGE_STORY = [
   // "snowfall", "city", "man", "girl", "street", "festival" ,"sunrise", "ending"
 
   // snowfall
-  { id: "1",  url: `${base}images/snowday_light.jpg`,     title: "Light Snow Fall",      category: "snowfall" },
-  { id: "2",  url: `${base}images/snowday_hard.jpg`,      title: "Hard Snow Fall",       category: "snowfall" },
-  { id: "3",  url: `${base}images/snowday_freezing.jpg`,  title: "Freezing Snow",        category: "snowfall" },
+  { id: "1",  url: `${base}/images/snowday_light.jpg`,     title: "Light Snow Fall",      category: "snowfall" },
+  { id: "2",  url: `${base}/images/snowday_hard.jpg`,      title: "Hard Snow Fall",       category: "snowfall" },
+  { id: "3",  url: `${base}/images/snowday_freezing.jpg`,  title: "Freezing Snow",        category: "snowfall" },
 
   // city
-  { id: "4",  url: `${base}images/city_london.jpg`,       title: "City London",          category: "city" },
-  { id: "5",  url: `${base}images/city_newyork.jpg`,      title: "City NewYork",         category: "city" },
-  { id: "6",  url: `${base}images/city_uk.jpg`,           title: "City UK",              category: "city" },
+  { id: "4",  url: `${base}/images/city_london.jpg`,       title: "City London",          category: "city" },
+  { id: "5",  url: `${base}/images/city_newyork.jpg`,      title: "City NewYork",         category: "city" },
+  { id: "6",  url: `${base}/images/city_uk.jpg`,           title: "City UK",              category: "city" },
 
   // man
-  { id: "7",  url: `${base}images/man_1.jpeg`,            title: "Man 1",                category: "man" },
-  { id: "8",  url: `${base}images/man_2.png`,             title: "Man 2",                category: "man" },
-  { id: "9",  url: `${base}images/man_3.jpeg`,            title: "Man 3",                category: "man" },
+  { id: "7",  url: `${base}/images/man_1.jpeg`,            title: "Man 1",                category: "man" },
+  { id: "8",  url: `${base}/images/man_2.png`,             title: "Man 2",                category: "man" },
+  { id: "9",  url: `${base}/images/man_3.jpeg`,            title: "Man 3",                category: "man" },
 
   // girl
-  { id: "10", url: `${base}images/girl_1.jpeg`,           title: "Girl 1",               category: "girl" },
-  { id: "11", url: `${base}images/girl_2.jpeg`,           title: "Girl 2",               category: "girl" },
-  { id: "12", url: `${base}images/girl_3.jpeg`,           title: "Girl 3",               category: "girl" },
+  { id: "10", url: `${base}/images/girl_1.jpeg`,           title: "Girl 1",               category: "girl" },
+  { id: "11", url: `${base}/images/girl_2.jpeg`,           title: "Girl 2",               category: "girl" },
+  { id: "12", url: `${base}/images/girl_3.jpeg`,           title: "Girl 3",               category: "girl" },
 
   // street
-  { id: "13", url: `${base}images/street_bythepier.jpg`,  title: "Street By the Pier",   category: "street" },
-  { id: "14", url: `${base}images/street_streetlight.jpg`,title: "Street Street Light",  category: "street" },
-  { id: "15", url: `${base}images/street_treelight.jpg`,  title: "Street Tree Light",    category: "street" },
+  { id: "13", url: `${base}/images/street_bythepier.jpg`,  title: "Street By the Pier",   category: "street" },
+  { id: "14", url: `${base}/images/street_streetlight.jpg`,title: "Street Street Light",  category: "street" },
+  { id: "15", url: `${base}/images/street_treelight.jpg`,  title: "Street Tree Light",    category: "street" },
 
   // festival
-  { id: "16", url: `${base}images/festival_europe.jpg`,   title: "Festival Europe",      category: "festival" },
-  { id: "17", url: `${base}images/festival_newyork.jpg`,  title: "Festival NewYork",     category: "festival" },
-  { id: "18", url: `${base}images/festival_trier.jpg`,    title: "Festival Trier",       category: "festival" },
+  { id: "16", url: `${base}/images/festival_europe.jpg`,   title: "Festival Europe",      category: "festival" },
+  { id: "17", url: `${base}/images/festival_newyork.jpg`,  title: "Festival NewYork",     category: "festival" },
+  { id: "18", url: `${base}/images/festival_trier.jpg`,    title: "Festival Trier",       category: "festival" },
 
   // sunrise
-  { id: "19", url: `${base}images/sunrise_bysea.jpg`,     title: "Sunrise BySea",        category: "sunrise" },
-  { id: "20", url: `${base}images/sunrise_city.jpg`,      title: "Sunrise City",         category: "sunrise" },
-  { id: "21", url: `${base}images/sunrise_onsnow.jpg`,    title: "Sunrise OnSnow",       category: "sunrise" },
+  { id: "19", url: `${base}/images/sunrise_bysea.jpg`,     title: "Sunrise BySea",        category: "sunrise" },
+  { id: "20", url: `${base}/images/sunrise_city.jpg`,      title: "Sunrise City",         category: "sunrise" },
+  { id: "21", url: `${base}/images/sunrise_onsnow.jpg`,    title: "Sunrise OnSnow",       category: "sunrise" },
 
   // ending
-  { id: "22", url: `${base}images/christmas_friend.jpg`,  title: "Ending with Friend",   category: "ending" },
-  { id: "23", url: `${base}images/christmas_home.jpg`,    title: "Ending at Home",       category: "ending" },
-  { id: "24", url: `${base}images/christmas_newyork.jpg`, title: "Ending in New York",   category: "ending" },
+  { id: "22", url: `${base}/images/christmas_friend.jpg`,  title: "Ending with Friend",   category: "ending" },
+  { id: "23", url: `${base}/images/christmas_home.jpg`,    title: "Ending at Home",       category: "ending" },
+  { id: "24", url: `${base}/images/christmas_newyork.jpg`, title: "Ending in New York",   category: "ending" },
 ];
 
 
