@@ -4,7 +4,6 @@ import "./App.css"; // Bring in styles for layout
 
 
 // image of the story, All images are put into one array
-//  (first item = blank) for the base in image in the middle. 
 // sidebars filter by this. category for displaying images in different headers and easily know which one will go to each blank space
 const IMAGE_STORY = [
   // "snowfall", "city", "man", "girl", "street", "festival" ,"sunrise", "ending"
@@ -48,7 +47,7 @@ const IMAGE_STORY = [
   { id: "22", url: `${base}/images/christmas_friend.jpg`,  title: "Ending with Friend",   category: "ending" },
   { id: "23", url: `${base}/images/christmas_home.jpg`,    title: "Ending at Home",       category: "ending" },
   { id: "24", url: `${base}/images/christmas_newyork.jpg`, title: "Ending in New York",   category: "ending" },
-];
+]; 
 
 
 
@@ -67,7 +66,7 @@ const STORY_SEGMENTS = [
   " - THE END - ",
 ];
 
-// hink inside the slot for images category
+// hint inside the slot for images category
 const SLOT_TARGETS = ["snowfall", "city", "man", "girl", "street", "festival" ,"sunrise","ending"]; 
 const SLOT_HINTS = Array.from(
   { length: Math.max(STORY_SEGMENTS.length - 1, 0) },
@@ -75,73 +74,73 @@ const SLOT_HINTS = Array.from(
 );
 
 
-// Sidebar shows a grid of draggable thumbnails. This sidebar show images per category 
+// Sidebar shows a grid of draggable thumbnails. This sidebar displays images grouped by category.
 function Sidebar({ images, onDragStart, title, groups, onUpload }) {
-  // If groups are provided, render multiple category sections in the same sidebar
+  // If the 'groups' prop is provided, render multiple category sections in the sidebar
+  // 'groups' help categorize the images into different sections in the sidebar
   if (groups && groups.length) {
     return (
       <aside className="sidebar">
+        {/* Iterate through each group and render a section for each */}
         {groups.map((group, gi) => (
           <section key={`grp-${gi}`}>
-            <h2 className="sidebarTitle">{group.title}</h2>
-            {/* 3-column grid for thumbs. */}
+            <h2 className="sidebarTitle">{group.title}</h2>  {/* Display the title of the category */}
+
+            {/* 3-column grid for displaying image thumbnails in each category */}
             <div className="thumb-grid">
               {group.images.map((img) => (
-                // Render each thumbnails
                 <div
                   key={img.id}
-                  className="thumb"
-                  draggable //make it can be drag
-                  onDragStart={(e) => onDragStart(e, img)} // Put image data onto drag payload
-                  aria-label={`Drag ${img.title} into the story`}
+                  className="thumb"  // Wrap each image in a thumbnail div
+                  draggable  // Make it draggable
+                  onDragStart={(e) => onDragStart(e, img)}  // Handle when an image starts being dragged
+                  aria-label={`Drag ${img.title} into the story`} // Accessibility label for dragging
                 >
-                  <img src={img.url} alt={img.title} />  {/* The image thumbnail. url and title above */}
-                  <span className="thumbCaption">{img.title}</span>
+                  {/* Image thumbnail, displayed inside the grid */}
+                  <img src={img.url} alt={img.title} />  {/* Image thumbnail for each image */}
+                  <span className="thumbCaption">{img.title}</span> {/* Title of the image */}
                 </div>
               ))}
             </div>
 
-            {/* per-category upload */}
+            {/* Upload button for each category */}
             <label className="upload__label" style={{ marginTop: 8 }}>
+              {/* A hidden file input that triggers on file selection */}
               <input
                 type="file"
-                multiple
-                accept="image/*"
-                // Uploaded files into this category
-                onChange={(e) => onUpload && onUpload(e, group.category)}
+                multiple  // Allow multiple files to be uploaded at once
+                accept="image/*"  // Limit file selection to images only
+                onChange={(e) => onUpload && onUpload(e, group.category)} // Call onUpload when files are selected, passing the category
               />
-              Add {group.title} images
+              Add {group.title} images  {/* Display the label of the category */}
             </label>
           </section>
         ))}
       </aside>
     );
   }
-
-    
-  //   display sidebar
+  // If 'groups' is not provided, render a default sidebar to display all images.
   return (
     <aside className="sidebar">
-      <h2 className="sidebarTitle">{title}</h2>
-      {/* 3-column grid for thumbs. */}
+      <h2 className="sidebarTitle">{title}</h2> {/* Sidebar title (e.g., "Place" or "Smell") */}
       <div className="thumb-grid">
-        {images.map((img) => ( 
-        // Render each thumbnails
+        {images.map((img) => (
           <div
             key={img.id}
             className="thumb"
-            draggable //make it can be drag
-            onDragStart={(e) => onDragStart(e, img)} // Put image data onto drag payload
-            aria-label={`Drag ${img.title} into the story`}
+            draggable // Make images draggable
+            onDragStart={(e) => onDragStart(e, img)}  // Start drag event handler
+            aria-label={`Drag ${img.title} into the story`} // Accessibility label
           >
-            <img src={img.url} alt={img.title} />  {/* The image thumbnail. url and title above */}
-            <span className="thumbCaption">{img.title}</span>
+            <img src={img.url} alt={img.title} />  {/* Display image thumbnail */}
+            <span className="thumbCaption">{img.title}</span>  {/* Image title */}
           </div>
         ))}
       </div>
     </aside>
   );
 }
+
 
 // Inline, between-words drop target used inside a paragraph. Will be called from app return
 // Displays a grey placeholder when empty
